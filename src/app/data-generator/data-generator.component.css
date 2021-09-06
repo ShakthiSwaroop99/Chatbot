@@ -1,0 +1,14 @@
+@media (min-width: 768px)
+{
+    .col-border-padding {
+        padding-left: 15px;
+    }
+    .col-border:before
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        border-left: 1px solid rgb(82, 79, 79);
+    }
+}

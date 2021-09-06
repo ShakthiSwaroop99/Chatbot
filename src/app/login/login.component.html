@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/home">ChatBot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div style="margin-top:50px"></div>
+<div class="row">
+    <div class="col-md-5 offset-md-4">
+        <div class="form-bg-light offset-md-4">
+            <h3 class="title">DU Configuration</h3>
+        </div>
+        <div class="login-form-1">
+            <form>
+            <div class="input">
+                <label>User Id</label>
+                <input class="form-control" type="text" name="userId" [(ngModel)]="userId">
+            </div>
+            <br>
+            <div class="input">
+                <label>Password</label>
+                <input class="form-control" type="password" name="password" [(ngModel)]="password">
+            </div>
+            <br>
+                <div class="input">
+                    <input type="submit" class="col-md-2 offset-md-1 btn btn-success" value="Login" (click)="Login()">
+                    <input class="col-md-2 offset-md-1 btn btn-primary" type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/home">ChatBot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-dark" (click)="usecase()">Back</button>
+    </div>
+</nav>
+
+<div style="margin-top:50px"></div>
+<div class="row">
+    <div class="col-md-5 offset-md-3">
+        <div class="form-bg-light offset-md-3">
+            <h3 class="title">Intent Configuration</h3>
+        </div>
+    </div>
+</div>
+
+<br>
+<form>
+<!-- <ng-container *ngFor ="let user of usersList ; let i = index"> -->
+    <div>
+    <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <label class="text-center font-weight-normal">Intent</label>
+                <ng-container *ngFor ="let user of usersList ; let i = index">
+                <input class="form-control" type="text" name="intentname" [(ngModel)]="user.intentname"><br>
+                </ng-container>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label class="text-center font-weight-normal">Intent Description</label>
+                <ng-container *ngFor ="let user of usersList ; let i = index">
+                <input class="form-control" type="text" name="description" [(ngModel)]="user.description"><br>
+            </ng-container>
+            </div>
+    </div>
+    </div>
+<!-- </ng-container> -->
+<br>
+
+            <div class="row">
+                <input type="submit" class="col-md-1 offset-md-2 btn btn-success" value="Submit" (click)="datagen()">
+                <input class="col-md-1 offset-md-1 btn btn-primary" type="reset" value="Reset">
+                <input class="col-md-1 offset-md-1 btn btn-secondary" type="submit" value="Add" (click)="addvalue()">
+                <input class="col-md-1 offset-md-1 btn btn-danger" type="submit" value="Remove" (click)="removevalue()">
+            </div>
+</form>

@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/home">ChatBot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-dark" (click)="intent()">Back</button>
+    </div>
+</nav>
+
+<div style="margin-top:50px"></div>
+<div class="row">
+    <div class="col-md-5 offset-md-4">
+        <div class="form-bg-light offset-md-3">
+            <h3 class="title">Data Generator</h3>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-2 offset-md-2">
+        <label class="font-weight-bolder text-justify">Select Intent</label>
+    <br>
+    <select ngModel name="Intent" class="form-select" aria-label="Default select example">
+    <option selected>--Select Intent--</option>
+    <option value="English">Intent 1</option>
+    <option value="Kannada">Intent 2</option>
+    <option value="Tamil">Intent 3</option>
+  </select><br><br>
+  <label class="font-weight-bold text-justify">Enter Intent</label>
+  <input type="text" placeholder="--enter intent--"><br>
+  <div style="text-align:left" >
+    <br>
+    <label class="font-weight-bold text-justify">Record</label><br>
+    <button (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording" style="cursor: pointer;background-color: green;color: white;font-size: 15px;"> Start Recording </button>
+    <button (click)="stopRecording()" class="btn btn-danger" *ngIf="recording" style="cursor: pointer;background-color: red;color: white;font-size: 15px;"> Stop Recording </button>
+    <audio controls="" *ngIf="url">
+    <source [src]="sanitize(url)" type="audio/wav">
+    </audio><br><br>
+    </div>
+    <button class="btn btn-primary col-md-7 offset-md-2" type="submit" value="Submit">Submit</button><br>
+  </div>
+
+  <div class="col-md-4 offset-md-2 col-border">
+      <div class="col-border-padding">
+    <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="th-sm">Intent Name</th>
+                <th class="th-sm">Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Absolute</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Relative</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Primary</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Secondary</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-4 offset-md-6" style="margin-top: 80px;">
+      <button class="btn btn-primary">Next</button>
+  </div>

@@ -1,0 +1,36 @@
+    
+    <div class="ng-container" style="max-height: 500px;overflow: scroll;">
+        <h1>TalkLess</h1>
+    <ng-container *ngFor="let message of messages | async">
+    <div class="message" *ngIf="message.sentBy != 'Voice'" [ngClass]="{ 'from': message.sentBy === 'bot',
+    'to': message.sentBy === 'user' }">
+    {{ message.content }}
+    </div>
+    <div class="message" *ngIf="message.sentBy === 'Voice'" [ngClass]="{ 'to': message.sentBy === 'Voice'}">
+    <audio controls="" *ngIf="message.sentBy === 'Voice'">
+        <source [src]="sanitize(url)" type="audio/wav">
+        </audio>
+    </div>
+    </ng-container>
+    
+     
+    <label for="nameField">Your Message</label>
+    <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+    <br><br>
+    <button (click)="sendMessage()" class="btn btn-primary">Send</button>
+    &nbsp;&nbsp;
+    <button (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording" style="cursor: pointer;background-color: green;color: white;font-size: 10px;"> Start Recording </button>
+    <button (click)="stopRecording()" class="btn btn-danger" *ngIf="recording" style="cursor: pointer;background-color: red;color: white;font-size: 10px;"> Stop Recording </button>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+</div>
+
+<div style="text-align:center;margin-top: 200px;" >
+   
+  
+    </div>
+
+
+

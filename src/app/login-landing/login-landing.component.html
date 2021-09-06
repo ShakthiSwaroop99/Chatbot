@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/home">ChatBot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-dark" (click)="login()">Back</button>
+    </div>
+</nav>
+
+<div style="margin-top:250px"></div>
+<div class="col-md-5 offset-md-5">
+    <button type="button" class="btn btn-primary col-md-3" (click)="chatbox()">
+        Soft Caller
+    </button><br><br>
+    <button type="button" class="btn btn-primary" (click)="dusconfig()">
+        DUS Configuration
+    </button>
+</div>

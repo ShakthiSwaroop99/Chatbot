@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/home">ChatBot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-dark" (click)="config()">Back</button>
+    </div>
+</nav>
+
+<div style="margin-top:50px"></div>
+<div class="row">
+    <div class="col-md-8 offset-md-4">
+        <div class="form-bg-light offset-md-1">
+            <h3 class="title">Usecase Configuration</h3>
+        </div><br>
+        <div>
+            <form #userForm="ngForm" (ngSubmit)="getValues(userForm.value)">
+                <div class="container">
+                    <label class="col-md-4 col-form-label">Usecase Name :</label>
+                    <input ngModel name="usecaseName" type="text" placeholder="Enter the Usecase Name">
+                </div><br>
+                <div class="container">
+                    <label class="col-md-4 col-form-label">Usecase Description:</label>
+                    <textarea ngModel name="description" placeholder="Description"></textarea>
+                </div><br>
+                <div class="container">
+                    <label class="col-md-4 col-form-label">Usecase Language:</label>
+                    <select ngModel name="language" class="form-select" aria-label="Default select example">
+                        <option selected>--Select Language--</option>
+                        <option value="English">English</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Tamil">Tamil</option>
+                      </select>
+                </div>
+                <br><br>
+                <div class="input">
+                    <input type="submit" class="col-md-2 offset-md-1 btn btn-success" value="Submit">
+                    <input class="col-md-2 offset-md-1 btn btn-primary" type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

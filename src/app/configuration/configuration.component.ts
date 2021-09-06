@@ -17,7 +17,7 @@ export class ConfigurationComponent implements OnInit {
     this.router.navigate(['/usecase'])
   }
   land(){
-    this.router.navigate(['/landing'])
+    this.router.navigate(['/landing'])//land
   }
   chatbox()
   {

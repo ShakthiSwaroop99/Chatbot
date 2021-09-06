@@ -22,7 +22,7 @@ this.intentData = {intentname: '', description: ''}
 
  addvalue()
   {
-//this.intentData = {intentname: '', description: ''};
+//this.intentData = {intentname: '', description: ''};pushing
     this.usersList.push(this.intentData);
     console.log(this.usersList)
   }
